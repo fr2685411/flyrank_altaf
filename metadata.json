@@ -1,0 +1,8 @@
+{
+  "name": "FlyRank Applied Search Intelligence",
+  "description": "An Early-Warning Queue & Intelligence Platform for Organic Search Content Decline, featuring the Three Front Doors publication system, interactive queue explorer, model benchmark evaluation, and real-time refresh opportunity simulator.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

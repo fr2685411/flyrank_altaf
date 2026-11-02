@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "./styles/doors.css";
+
+/* Custom scrollbars and transitions */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+.pane::-webkit-scrollbar {
+  width: 6px;
+}
+.pane::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.pane::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.pane::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
