@@ -9,11 +9,12 @@ import { ModelBenchmarks } from './components/ModelBenchmarks';
 import { DataContractView } from './components/DataContractView';
 import { RoiPlanner } from './components/RoiPlanner';
 import { PageDrawer } from './components/PageDrawer';
+import { PresentationView } from './components/PresentationView';
 
 const queueData = queueDataRaw as unknown as ScoredPage[];
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('doors');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('presentation');
   const [selectedPage, setSelectedPage] = useState<ScoredPage | null>(null);
   const [simulatorInputs, setSimulatorInputs] = useState<SimulatorInputs | null>(null);
 
@@ -49,6 +50,15 @@ export const App: React.FC = () => {
 
       {/* Main Content Area */}
       <main className="flex-1">
+        {activeTab === 'presentation' && (
+          <PresentationView
+            onNavigateTab={(tab) => {
+              setActiveTab(tab);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        )}
+
         {activeTab === 'doors' && (
           <ThreeDoorsView
             onOpenQueue={() => {

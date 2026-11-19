@@ -12,6 +12,9 @@ export interface ScoredPage {
   is_declining_label: string | number;
   impressions_90d: string | number;
   clicks_90d: string | number;
+  clicks_early_30d?: number;
+  clicks_prev_30d?: number;
+  clicks_last_30d?: number;
   sessions_90d: string | number;
   avg_position: string | number;
   ctr: string | number;
@@ -19,6 +22,7 @@ export interface ScoredPage {
   days_since_last_update: string | number;
   word_count: string | number;
   trend_direction: 'down' | 'flat' | 'up';
+  trend_pct?: number;
   competition_level: string;
   content_type: string;
   main_intent: string;
